@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceBlock name="footer_links" remove="true"/>
+		<referenceBlock name="form.subscribe" remove="true"/>
+
+
+		<referenceContainer name="footer">
+			<block class="Magento\Theme\Block\Html\Header\Logo" name="logo_footer" before="-">
+             	<arguments>
+                    <argument name="logo_img_width" xsi:type="number">139</argument>
+                    <argument name="logo_img_height" xsi:type="number">44</argument>
+                </arguments>
+            </block>
+
+			<block class="Magento\Cms\Block\Block" name="cms_footer_satu" after="logo_footer">
+				<arguments>
+					<argument name="block_id" xsi:type="string">cms_footer_satu</argument>
+				</arguments>
+			</block>
+
+			<block class="Magento\Cms\Block\Block" name="cms_footer_dua" after="cms_footer_satu">
+				<arguments>
+					<argument name="block_id" xsi:type="string">cms_footer_dua</argument>
+				</arguments>
+			</block>
+
+			<block class="Magento\Cms\Block\Block" name="cms_footer_tiga" after="cms_footer_dua">
+				<arguments>
+					<argument name="block_id" xsi:type="string">cms_footer_tiga</argument>
+				</arguments>
+			</block>
+			<block class="Magento\Cms\Block\Block" name="cms_footer_letter" after="cms_footer_tiga">
+				<arguments>
+					<argument name="block_id" xsi:type="string">cms_footer_letter</argument>
+				</arguments>
+			</block>
+		</referenceContainer>
+
+	</body>
+</page>
