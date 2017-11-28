@@ -9,6 +9,7 @@
 	<body>
 		<referenceBlock name="footer_links" remove="true"/>
 		<referenceBlock name="form.subscribe" remove="true"/>
+		<!-- <referenceBlock name="copyright" remove="true"/> -->
 
 
 		<referenceContainer name="footer">
@@ -39,6 +40,11 @@
 			<block class="Magento\Cms\Block\Block" name="cms_footer_letter" after="cms_footer_tiga">
 				<arguments>
 					<argument name="block_id" xsi:type="string">cms_footer_letter</argument>
+				</arguments>
+			</block>
+			<block class="Magento\Cms\Block\Block" name="cms_footer_sponsor" after="cms_footer_letter">
+				<arguments>
+					<argument name="block_id" xsi:type="string">cms_footer_sponsor</argument>
 				</arguments>
 			</block>
 		</referenceContainer>
